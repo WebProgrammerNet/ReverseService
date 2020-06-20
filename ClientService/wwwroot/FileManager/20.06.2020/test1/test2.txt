@@ -1,0 +1,5 @@
+For entities being tracked by the Microsoft.EntityFrameworkCore.DbContext, the
+values of foreign key properties in dependent entities are set to null when the
+related principal is deleted.This helps keep the graph of entities in a consistent
+state while they are being tracked, such that a fully consistent graph can then
+be written to the database.If a property cannot be set to null because it is
